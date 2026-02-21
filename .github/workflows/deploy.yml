@@ -23,4 +23,4 @@ jobs:
           context: .
           push: true
           # Menggunakan tag 'latest' agar mudah ditarik dengan imagePullPolicy: Always
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-express-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/backend-todo-list:latest
