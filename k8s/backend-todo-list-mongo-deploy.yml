@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-deploy
+  name: backend-todo-list-mongodb-deploy
 spec:
   selector:
     matchLabels:
-      app: mongodb
+      app: backend-todo-list-mongodb
   template:
     metadata:
       labels:
-        app: mongodb
+        app: backend-todo-list-mongodb
     spec:
       containers:
-      - name: mongodb
+      - name: backend-todo-list-mongodb
         image: mongo:latest
         ports:
         - containerPort: 27017
@@ -25,10 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-service
+  name: backend-todo-list-mongodb-service
 spec:
   selector:
-    app: mongodb
+    app: backend-todo-list-mongodb
   ports:
     - port: 27017
       targetPort: 27017
