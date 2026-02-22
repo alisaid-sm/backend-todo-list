@@ -27,6 +27,10 @@ const swaggerOptions = {
         url: "http://192.168.56.10:32000", // Sesuaikan dengan IP dan NodePort kamu
         description: "Development server",
       },
+      {
+        url: "http://localhost:3000", // Sesuaikan dengan IP dan NodePort kamu
+        description: "Local server",
+      },
     ],
   },
   apis: ["./app.js"], // Lokasi file yang berisi dokumentasi route
